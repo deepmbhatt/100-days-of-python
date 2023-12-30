@@ -1,3 +1,4 @@
+#This is the code for The classic game ROCK PAPER AND SCISSOR
 print("Welcome to rock, paper and scissor.")
 player=int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 rock='''
