@@ -1,3 +1,4 @@
+#This is a code using if else nesting tables to make a Treasure island game where a certain path leads to treasure
 print('''*******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
