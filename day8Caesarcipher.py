@@ -45,3 +45,4 @@ elif what_to_do=="decode":  #decryption code
     print(f"The decrypted code is:\n{ciphered}")
 else:
     print("Error, type encode or decode.")
+#other way to solve this is by making a list with alphabets from a to z and using it to encode or decode by index values
