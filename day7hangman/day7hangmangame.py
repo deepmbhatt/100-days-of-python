@@ -13,27 +13,29 @@ word_to_guess=random.choice(word_list)
 #To display the wword with just blanks
 display=[]
 for i in word_to_guess:
-    display.append(_ )
-print(display)
+    display.append('_')
+print(''.join(display))
 lives=6
-end_of_game=False #exit statement for while loop
+end_of_game=False   #exit statement for while loop
 while not end_of_game:
     guess=input("Guess a letter: ")
-    clear()#to clear terminal everytime the user guesses
-    if guess in display:#when already guessed
+    clear()     #to clear terminal everytime the user guesses
+    if guess in display:    #when already guessed
         print(f"You already guessed: {guess}")
-    for i in range(len(word_to_guess)):#to replace _ with the guessed value if present
+    for i in range(len(word_to_guess)):     #to replace _ with the guessed value if present
         letter = word_to_guess[i]
         if letter==guess:
             display[i]=letter
-    if guess not in word_to_guess:#if not present reduce life
-        print(f"You guessed {guess}. It is not in the word. You loose a life.")
+    if guess not in word_to_guess:      #if not present reduce life
         lives-=1
-        if lives==0:#loosing condition
+        if lives==0:        #loosing condition
             end_of_game=True
             print("YOU LOSE!!")
-    print(''.join(display))#to print the list in string form
-    if '_' not in display:#Winning condition
+            print(f"The actual word was: {word_to_guess}")
+        else:
+            print(f"You guessed {guess}. It is not in the word. You loose a life.")
+    print(''.join(display))     #to print the list in string form
+    if '_' not in display:      #Winning condition
         end_of_game=True
         print("YOU WIN!")
-    print(stages[lives])#printing the ASCII art
+    print(stages[lives])    #printing the ASCII art
