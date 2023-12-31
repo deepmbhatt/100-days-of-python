@@ -1,34 +1,39 @@
+#This is a colde for hangman game which is similar to BOLLYWOOD game from India
 from replit import clear
+#Above library is used to clear the terminal
 import random
+#Above library for random selection
 from hangman_stages import stages,logo
 from hangman_words import word_list
+#To import the lists from other files
 print("Welcome to the")
 print(logo)
+#To randomly choose a word from the list
 word_to_guess=random.choice(word_list)
-word_len=len(word_to_guess)
+#To display the wword with just blanks
 display=[]
-lives=6
 for i in word_to_guess:
-    display.append('_')
+    display.append(_ )
 print(display)
-end_of_game=False
+lives=6
+end_of_game=False #exit statement for while loop
 while not end_of_game:
     guess=input("Guess a letter: ")
-    clear()
-    if guess in display:
+    clear()#to clear terminal everytime the user guesses
+    if guess in display:#when already guessed
         print(f"You already guessed: {guess}")
-    for i in range(len(word_to_guess)):
+    for i in range(len(word_to_guess)):#to replace _ with the guessed value if present
         letter = word_to_guess[i]
         if letter==guess:
             display[i]=letter
-    if guess not in word_to_guess:
+    if guess not in word_to_guess:#if not present reduce life
         print(f"You guessed {guess}. It is not in the word. You loose a life.")
         lives-=1
-        if lives==0:
+        if lives==0:#loosing condition
             end_of_game=True
             print("YOU LOSE!!")
-    print(''.join(display))
-    if '_' not in display:
+    print(''.join(display))#to print the list in string form
+    if '_' not in display:#Winning condition
         end_of_game=True
         print("YOU WIN!")
-    print(stages[lives])
+    print(stages[lives])#printing the ASCII art
