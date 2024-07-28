@@ -1,4 +1,5 @@
 from tkinter import *
+import pyperclip
 peach = "#FFE9D0"
 yellow = "#FFFED3"
 blue = "#BBE9FF"
@@ -54,6 +55,7 @@ def on_generate():
         password+=random.choice(numbers)
     password=''.join(random.sample(password,len(password)))
     password_input.insert(0,password)
+    pyperclip.copy(password)
 
 
 canvas = Canvas(width=250, height=250, bg=yellow, highlightthickness=0)
