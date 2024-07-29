@@ -35,9 +35,9 @@ def is_known():
     data.to_csv("day31flashcardgame/data/words_to_learn.csv", index=False)
 
 def flip_card():
-    canvas.itemconfig(card_title, text="English", fill="black")
-    canvas.itemconfig(card_word, text=current_card["English"], fill="black")
-    canvas.itemconfig(card_front, image=card_front)
+    canvas.itemconfig(card_title, text="English", fill="white")
+    canvas.itemconfig(card_word, text=current_card["English"], fill="white")
+    canvas.itemconfig(card_background, image=card_back_img)
 
 
 current_card = {}
@@ -48,7 +48,8 @@ flip_timer = window.after(3000, func=flip_card)
 
 canvas = Canvas(width=800, height=526)
 card_front = PhotoImage(file="day31flashcardgame/images/card_front.png")
-canvas.create_image(400, 263, image=card_front)
+card_back_img = PhotoImage(file="day31flashcardgame/images/card_back.png")
+card_background = canvas.create_image(400, 263, image=card_front)
 card_title = canvas.create_text(400, 150, text="Title", font=("Arial", 40, "italic"))
 card_word = canvas.create_text(400, 263, text="Word", font=("Arial", 60, "bold"))
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
