@@ -2,8 +2,8 @@ import smtplib
 import datetime as dt
 import random
 
-my_email = "deeppythonprojects@gmail.com"
-password = "ragrptyuhkfzvxqu"
+my_email = "[Your Email]"
+password = "[Your Password]"
 
 try:
     with open("day32automatedbirthdaywisher/quotes.txt") as file:
@@ -29,6 +29,6 @@ if weekday == 0:
         connection.login(user=my_email, password=password)
         connection.sendmail(
             from_addr=my_email, 
-            to_addrs="deepmanishbhatt@gmail.com", 
+            to_addrs="[Reciever Email]",
             msg = msg)
         connection.close()
