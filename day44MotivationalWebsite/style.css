@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.poster {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.text{
+  color:white;
+  text-align: center;
+  font-family: "Grey Qo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 400%;
+}
+
+.motivation-img {
+  border: 5px solid white;
+  width: 100%;
+}
+.grey-qo-regular {
+
+}
