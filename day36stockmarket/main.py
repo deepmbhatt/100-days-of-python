@@ -12,12 +12,12 @@ company_name = "Reliance Industries Limited Ltd"
 stock_api = "YOUR STOCK API"
 news_api = "YOUR NEWS API"
 stock_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={stock}&outputsize=compact&apikey={stock_api}"
-response = requests.get(stock_url)
-response.raise_for_status()
-stock_data = response.json()
+response = requests.get(stock_url) # Get the stock data
+response.raise_for_status() # Raise an exception if the status code is not 200
+stock_data = response.json() # Convert the data to JSON
 
-news_url = "https://newsapi.org/v2/everything"
-news_parameters = {
+news_url = "https://newsapi.org/v2/everything" # The news API endpoint
+news_parameters = { # The news API parameters
     "q": company_name,
     "apiKey": news_api
 }
@@ -25,33 +25,33 @@ news_parameters = {
 
 
 
-stock_data_list = [value for (key, value) in stock_data["Time Series (Daily)"].items()]
-yesterday_data = stock_data_list[0]
-yesterday_closing = float(yesterday_data["4. close"])
-day_before_yesterday_data = stock_data_list[1]
-day_before_yesterday_closing = float(day_before_yesterday_data["4. close"])
-difference = float(yesterday_closing) - float(day_before_yesterday_closing)
+stock_data_list = [value for (key, value) in stock_data["Time Series (Daily)"].items()] # Get the stock data list
+yesterday_data = stock_data_list[0] # Get the data for yesterday
+yesterday_closing = float(yesterday_data["4. close"]) # Get the closing price for yesterday
+day_before_yesterday_data = stock_data_list[1]  # Get the data for the day before yesterday
+day_before_yesterday_closing = float(day_before_yesterday_data["4. close"]) # Get the closing price for the day before yesterday
+difference = float(yesterday_closing) - float(day_before_yesterday_closing) # Calculate the difference between the closing prices
 up_down = None
-if difference > 0:
+if difference > 0: # Check if the difference is positive
     up_down = "🔺"
-else:
+else: # If the difference is negative
     up_down = "🔻"
     
-difference_percentage = round((difference / yesterday_closing) * 100)
+difference_percentage = round((difference / yesterday_closing) * 100) # Calculate the difference percentage
 print(difference_percentage)
 
-if abs(difference_percentage) >= 1:
-    news_response = requests.get(news_url, params=news_parameters)
-    news_response.raise_for_status()
-    articles = news_response.json()["articles"]
-    three_articles = articles[:3]
-    formatted_articles = [f"{stock}: {up_down}{difference_percentage}%\nHeadline: {article['title']}\nBrief: {article['description']}" for article in three_articles]
+if abs(difference_percentage) >= 1: # Check if the difference percentage is greater than or equal to 1
+    news_response = requests.get(news_url, params=news_parameters) # Get the news data
+    news_response.raise_for_status() # Raise an exception if the status code is not 200
+    articles = news_response.json()["articles"] # Get the articles
+    three_articles = articles[:3]   # Get the first three articles
+    formatted_articles = [f"{stock}: {up_down}{difference_percentage}%\nHeadline: {article['title']}\nBrief: {article['description']}" for article in three_articles] # Format the articles
     print(formatted_articles)
-    for article in formatted_articles:
+    for article in formatted_articles: # Loop through the articles
         message = client.messages.create(
-        from_='+16183427045',
+        from_='FROM NUMBER',
         body=article,
-        to='+919574434446'
+        to='TO NUMBER'
         )
 
 
