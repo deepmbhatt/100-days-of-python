@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>This is the home section of the website. Here you can find the latest updates and news.</p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>This section provides information about our website and its purpose.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>We offer a variety of services to meet your needs. Check out the list below:</p>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+    <button id="toggle-button">Toggle CSS</button>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+
+        // Initially, the CSS is not applied
+        let cssApplied = false;
+
+        toggleButton.addEventListener('click', () => {
+            if (cssApplied) {
+                themeStylesheet.setAttribute('href', 'toggle.html');
+            } else {
+                themeStylesheet.setAttribute('href', 'toggle.css');
+            }
+            cssApplied = !cssApplied;
+        });
+    </script>
+    </body>
+</html>
