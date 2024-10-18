@@ -1,6 +1,23 @@
 # **100 Days of Python**
 Welcome to my 100 Days of Python repository! This repository contains projects completed as part of the 100 Days of Python course. Each project aims to enhance my Python programming skills through practical application and hands-on experience.
 
+
+![Python](https://img.shields.io/badge/Python-3.11.8-yellow)
+![Requests](https://img.shields.io/badge/Requests-2.28.1-blue)
+![Flask](https://img.shields.io/badge/Flask-2.2.2-green)
+![Beautiful%20Soup](https://img.shields.io/badge/Beautiful%20Soup-4.11.1-orange)
+![Selenium](https://img.shields.io/badge/Selenium-4.0.0-lightgrey)
+![NumPy](https://img.shields.io/badge/NumPy-1.23.1-blue)
+![Pandas](https://img.shields.io/badge/Pandas-1.5.0-orange)
+![Tkinter](https://img.shields.io/badge/Tkinter-8.6.12-lightgrey)
+![Turtle](https://img.shields.io/badge/Turtle-1.0.0-green)
+![Pygame](https://img.shields.io/badge/Pygame-2.1.0-purple)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.6.0-red)
+![Twilio](https://img.shields.io/badge/Twilio-6.60.0-blue)
+![SMTP](https://img.shields.io/badge/SMTP-1.0.0-orange)
+![HTML](https://img.shields.io/badge/HTML-5.0-red)
+![CSS](https://img.shields.io/badge/CSS-3.0-blue)
+
 ## **Introduction**
 The goal of this repository is to document my progress as I tackle various Python projects and challenges. Each project is designed to build on the skills learned in previous days, gradually increasing in complexity. By the end of the 100 days, I aim to have a strong understanding of Python and its various applications.
 
