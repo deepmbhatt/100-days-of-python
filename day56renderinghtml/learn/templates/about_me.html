@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Deep M. Bhatt's Portfolio</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deep Manish Bhatt's Personal Portfolio Website">
+    <meta name="author" content="Deep Manish Bhatt">    
+    <link rel="shortcut icon" href="assets/images/extra/1683038965803.jpeg"> 
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/devdesk.css">
+
+</head> 
+
+<body>    
+	<div class="page-header-wrapper">
+		<div class="page-header-bg-pattern-holder">
+			<div class="bg-pattern-top"></div>
+			<div class="bg-pattern-bottom"></div>
+		</div><!--//page-header-bg-pattern-holder-->
+		
+		</div><!--//page-heading-holder-->
+	</div><!--//page-header-wrapper-->
+	
+
+	
+	<div class="help-content-wrapper theme-section pt-4">		
+		<div class="container">
+			<div class="row">
+	            <div class="col-lg-8 col-xl-9">
+		            <section class="main-section order-lg-last mb-5">
+			           <h2 class="main-section-heading mb-4"><b>About Me</b></h2>
+			           <div class="intro mb-5"><p>Hello! I'm Deep M. Bhatt, an enthusiastic Information Technology student at New L.J. Institute of Engineering and Technology in Ahmedabad. With a passion for Artificial Intelligence, Machine Learning, Software Development, and data-driven solutions, I enjoy exploring new technologies and applying them to solve real-world challenges.</p></div>
+			           
+					   
+		            </section><!--//main-section-->
+					<section class="main-section mb-5">
+						<h2 class="main-section-heading mb-4"><b>My Education</b></h2>
+						<div class="skills">
+							<div class="theme-callout theme-callout-info">
+								<h4>Bachelor's in Engineering: Information Technology</h4>
+								<div>New L. J. Institute of Engineering and Technology</div>
+								<div>September, 2021 - June, 2025</div>
+								<div><b>CGPA: 9.82</b></div>
+								<button class="btn btn-info mt-3" onclick="toggleContent()">Courses I completed:</button>
+								<div id="extraContent" style="display: none;">
+									<br>
+									<div class="row">
+										<div class="col-md-6">
+											<ul>
+												<li>Analysis and Design of Algorithms</li>
+												<li>Computer Networks</li>
+												<li>Computer Organization & Architecture</li>
+												<li>Cryptography and Network Security</li>
+												<li>Data Analysis and Visualization</li>
+												<li>Data Science</li>
+												<li>Data Structures</li>
+												<li>Data Warehousing and Mining</li>
+												<li>Database Management Systems</li>
+												<li>Digital Fundamentals</li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<ul>
+												<li>Discrete Mathematics</li>
+												<li>Image Processing</li>
+												<li>Engineering Mathematics</li>
+												<li>Object Oriented Programming</li>
+												<li>Operating System and Virtualization</li>
+												<li>Probability and Statistics</li>
+												<li>Programming for Problem Solving</li>
+												<li>Software Engineering</li>
+												<li>Web Development</li>
+											</ul>
+										</div>
+									</div>
+
+								<script>
+								function toggleContent() {
+									var content = document.getElementById("extraContent");
+									if (content.style.display === "none") {
+										content.style.display = "block";
+									} else {
+										content.style.display = "none";
+									}
+								}
+								</script>
+								</div>
+							</div><!--//skill-item-->
+					</section><!--//main-section-->
+					<section class="main-section mb-5">
+						
+						<h2 class="main-section-heading mb-4"><b>Contact Me</b></h2>
+						<div class="theme-callout theme-callout-info">
+							<div class="skill-item">
+								<div><b>Email:</b> <a href="mailto:deepmanishbhatt@gmail.com">deepmanishbhatt@gmail.com</a></div>
+								<div><b>Address:</b> Ahmedabad, Gujarat, India</div>
+							</div>
+							<div class="social-links">
+								<a href="https://github.com/deepmbhatt" target="_blank">
+									<i class="bi bi-github" style="font-size: 25px; margin-right: 10px;"></i>
+								</a>
+								<a href="https://www.linkedin.com/in/deep-m-bhatt-59b014262/" target="_blank">
+									<i class="bi bi-linkedin" style="font-size: 25px; margin-right: 10px;"></i>
+								</a>
+							</div>
+						</div>
+
+						
+
+					</section>
+					<section class="main-section mb-5">
+						
+						<h2 class="main-section-heading mb-4"><b>My Resume</b></h2>
+						<div class="theme-callout theme-callout-info">
+							<a href="assets/pdf/Deep Manish Bhatt Resume.pdf" class="btn btn-primary" target="_blank">Download My Resume (PDF)</a>
+						</div>
+
+						
+
+					</section>
+	            </div><!--//col-->
+	            
+	            <div class="col-lg-4 col-xl-3 order-lg-first">
+		           <div class="side-bar">
+			            <h3 class="side-bar-heading mb-4">Categories</h3>
+			            <nav class="side-bar-nav">
+				            <ul class="sidebar-nav-items list-unstyled flex-column">
+								<li class="nav-item"><a class="active" href="about-me.html">About Me</a></li>
+								<li class="nav-item"><a href="skills.html">My Skills</a></li>
+								<li class="nav-item"><a href="work.html">Work Experience</a></li>
+								<li class="nav-item"><a href="projects.html">My Projects</a></li>
+								<li class="nav-item"><a href="certification.html">Certification</a></li>
+								<li class="nav-item"><a href="achievements.html">Achievements</a></li>
+				            </ul><!--//sidebar-nav-items-->
+			            </nav><!--//side-bar-nav-->
+		            </div><!--//side-bar-->
+	            </div><!--//col-->
+			</div><!--//row-->
+			
+		</div><!--//container-->
+	</div><!--//help-category-section-->
+
+
+	<footer class="footer py-3">
+		<div class="container text-center">
+			<b>Deep M. Bhatt © 2024</b>
+				
+			<a class="text-white btn-sm" href="https://github.com/deepmbhatt" target="_blank">
+				<i class="bi bi-github"></i>
+			</a>
+			<a class="text-white btn-sm" href="https://www.linkedin.com/in/deep-m-bhatt-59b014262/" target="_blank">
+				<i class="bi bi-linkedin"></i>
+			</a>
+				
+		</div>
+		<div class="container text-center" style="font-size: 0.5em;">
+		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+		<small class="copyright">Designed by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+		</div><!--//container-->	
+	</footer><!--//footer-->
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background-color: #007bff; color: white; display: none;"> 
+		<i class="bi bi-arrow-up-short"></i>
+	</a>
+
+	<script>
+		window.addEventListener('scroll', function() {
+			var scrollTopButton = document.getElementById('scroll-top');
+			if (window.scrollY > 100) {
+				scrollTopButton.style.display = 'flex';
+			} 
+			else {
+				scrollTopButton.style.display = 'none';
+			}
+		});
+
+		document.getElementById('scroll-top').addEventListener('click', function(e) {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	</script>
+	<!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
+    <script src="assets/js/sticky-custom.js"></script>
+
+</body>
+</html> 
